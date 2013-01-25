@@ -1,4 +1,3 @@
-
 angular.module('$strap.directives')
 
 .directive('bsButton', ['$parse', '$timeout', function($parse, $timeout) {
@@ -135,7 +134,7 @@ angular.module('$strap.directives')
 
 					iElement.on('click.button.data-api', function (ev) {
 						scope.$apply(function () {
-							controller.$setViewValue($(ev.target).attr('value'));
+							controller.$setViewValue($(ev.target).closest('button').attr('value'));
 						});
 					});
 
